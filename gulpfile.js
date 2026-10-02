@@ -35,7 +35,7 @@ function scripts() {
 
 // 4. Картинки
 function images() {
-  return src('src/imgs/**/*')
+  return src('src/imgs/**/*', { encoding: false })
     .pipe(dest('dist/imgs'))
     .pipe(browserSync.stream());
 }
